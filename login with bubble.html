@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>login page2</title>
+        <body>
+            <div class="container">
+                <div class="bubble">
+            <h2>Welcome</h2>
+            <div class="form">
+               <input type="text" placeholder="Enter your username" required><br><br>
+               <input type="text" placeholder="Enter your passsword" required><br><br>
+            </div>
+            <div class="button-bg">
+            <div class="button">
+                <p>login</p>
+            </div></div>
+            <div class="text">
+                <p>Don't have an account?</p>
+                <a href="#">sign up</a>
+            <!-- bubbles -->
+            <div class="bubbles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            </div>
+            </div>
+            </div>
+        </body>
+    </head>
+    </html>
+    <style>
+        body{
+            background: linear-gradient(90deg,#00AEEF,#00FFAA);
+            color:azure;
+            text-align: center;
+            
+        }
+        .a{
+            text-decoration: none;
+            color:rgba(0, 0, 255, 0.566);
+        }
+        a.hover{
+            text-decoration: underline;
+        }
+        .button{
+            background-color:rgba(0, 0, 255, 0.456);
+            border-radius: 5px;
+            display:inline-block;
+            color:aliceblue;
+            margin:10px auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            border:none;
+            cursor:pointer;           
+            }
+        .container{
+            background-color:rgba(139, 0, 139, 0.393);
+            background-size: cover;
+            border-radius: 30px;
+        }
+        /* bubbles */
+        .bubbles{
+            position:fixed;
+            inset:0;
+            z-index:0;
+            pointer-events:none;
+            }
+        .bubbles span{
+            position:absolute;
+            bottom:-120px;
+            background:aquamarine;
+            border-radius:50%;
+            animation: rise 12s linear infinite;
+            }
+            .bubbles span:nth-child(1){ left:12%; width:40px; height:40px; animation-duration:11s; }
+            .bubbles span:nth-child(2){ left:28%; width:22px; height:22px; animation-duration:9s;  animation-delay:1s; }
+            .bubbles span:nth-child(3){ left:46%; width:55px; height:55px; animation-duration:14s; animation-delay:3s; }
+            .bubbles span:nth-child(4){ left:62%; width:28px; height:28px; animation-duration:10s; animation-delay:2s; }
+            .bubbles span:nth-child(5){ left:78%; width:44px; height:44px; animation-duration:13s; animation-delay:4s; }
+            
+        
+    @keyframes rise{
+      0%   { transform: translateY(0); opacity:0.3; }
+      50%  { opacity:0.8; }
+      100% { transform: translateY(-110vh); opacity:0; }
+    }
+
+
+    </style>
+</html>

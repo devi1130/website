@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Star Beauty Parlour</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+
+  <style>
+    body {
+      color: black;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container1 {
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 30px;
+    }
+
+    .login-btn {
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #ff3385;
+    }
+
+    .title h2, 
+    .title h3, 
+    .title h4 {
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: transparent;
+      padding: 10px;
+      position: relative;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      background-color: #444;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      width: 150px;
+      border-radius: 8px;
+    }
+
+    .menu.show {
+      display: block;
+    }
+
+    .menu li {
+      border-bottom: 1px solid #555;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+    }
+
+    .Information {
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 16px;
+      background-color: rgba(147, 112, 216, 0.619);
+      color: black;
+      padding: 10px 0;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+  
+    .one img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+   
+    .row .col {
+      background-color: transparent !important;
+      box-shadow: none !important;
+      padding:10px;
+    }
+
+    .row img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <header>
+      <button class="login-btn">
+      <a href="login with bubble.html">Login</a><br>
+    </button>
+      </header>
+    </header>
+
+   
+    <nav class="navbar">
+      <div class="menu-icon" id="menuIcon">&#9776;</div>
+      <ul class="menu" id="menuList">
+        <li><a href="#" id="homeLink">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      const menuIcon = document.getElementById('menuIcon');
+      const menuList = document.getElementById('menuList');
+      const homeLink = document.getElementById('homeLink');
+      const content = document.getElementById('content');
+
+      menuIcon.onclick = () => {
+        menuList.classList.toggle('show');
+      };
+
+      homeLink.onclick = () => {
+        content.innerHTML = `
+          <h2>Home</h2>
+          <p>This is the Home section. You can add more details here.</p>
+        `;
+        menuList.classList.remove('show');
+      };
+    </script>
+    <div class="title">
+      <h2>Shiny Star Beauty Parlour</h2>
+      <h3>Beauty and Wellness - for everyone.</h3>
+      <h4>Brighten your glow with home Salon's best and exclusive deals.</h4>
+    </div>
+
+   <div class="one mt-4">
+  <div id="parlourCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="image1.jpeg" class="d-block w-100 h-200" alt="slide1">
+      </div>
+      <div class="carousel-item">
+        <img src="image2.jpeg" class="d-block w-:100 h-200" alt="slide2">
+      </div>
+      <div class="carousel-item">
+        <img src="image3.jpeg" class="d-block w-100 h-200" alt="slide3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#parlourCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#parlourCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+   
+   
+    <div class="offers mt-4">
+      <h4>🎉 Special Offers 🎉</h4>
+      ✨ Bridal Package Offer: Get up to 25% off on full bridal makeup packages.<br>
+      💇‍♀️ Hair Care Combo: Haircut + Hair Spa + Blow Dry — just ₹999!<br>
+      💅 Beauty Glow Deal: Facial + Pedicure + Manicure — Save 20% this month.<br>
+      💖 New Customer Offer: Flat 15% off on your first visit!<br>
+      🌸 Festival Special: Book any 2 services and get the 3rd free!<br>
+    </div>
+
+
+   
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <img src="new1.jpeg" alt="img1">
+          <center><p>Hair Care</p></center>
+        </div>
+        <div class="col">
+          <img src="new2.jpeg" alt="img2">
+          <center><p>Hair Cut</p></center>
+        </div>
+        <div class="col">
+          <img src="new3.jpeg" alt="img3">
+          <center><p>Pedicure</p></center>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <img src="new4.jpeg" alt="img4">
+          <center><p>Manicure</p></center>
+        </div>
+        <div class="col">
+          <img src="new5.jpeg" alt="img5">
+          <center><p>Facial</p></center>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <img src="new7.jpeg" alt="img6">
+          <center><p>Threading</p></center>
+        </div>
+        <div class="col">
+          <img src="new6.jpeg" alt="img7">
+          <center><p>Makeover</p></center>
+        </div>
+        <div class="col">
+          <img src="new13.jpeg" alt="img8">
+          <center><p>Mehandi</p></center>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="Link mt-4">
+      <h5>Links</h5>
+      <a href="contact us.html">Contact Us</a><br>
+      <a href="termscondition.html">Terms and Conditions</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
+      <a href="Service.html">Our Service</a>
+    </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Star Beauty Parlour</title>
+  </head>
+  <body>
+  <div class="Service">
+    <div class="card">
+            <img src="new1.jpeg" alt="Hair Care">
+      <h3><u>Hair Care</u></h3>
+            <p>✔️ Hair Spa</p>
+            <p>✔️ Henna Application</p>
+            <p>✔️ Hot Oil Massage</p>
+            <p>✔️ Hair Mask</p>
+            <p>✔️ Hair Smoothening</p></div>
+    <div class="card">
+            <img src="new2.jpeg" alt="Hair cut">
+      <h3><u>Hair Cut</u></h3>
+           <p>✔️ U-Cut</p>
+           <p>✔️ V-Cut</p>
+            <p>✔️ Normal-Cut</p>
+            <p>✔️ Feather-Cut</p>
+            <p>✔️ Under-Cut</p></div>
+    <div class="card">
+            <img src="new3.jpeg" alt="Manicure">
+      <h3><u>Manicure</u></h3>
+             <p>✔️ Normal manicure</p>
+              <p>✔️ Spa manicure</p></div>
+    <div class="card">
+            <img src="new4.jpeg" alt="makeup">
+      <h3><u>Pedicure</u></h3>
+             <p>✔️ Normal pedicure</p>
+              <p>✔️ spa pedicure</p></div>
+    <div class="card">
+            <img src="new5.jpeg" alt="makeup">
+      <h3><u>Facial</u></h3>
+            <p>✔️ Normal Facial</p>
+            <p>✔️ Fruit Facial</p>
+            <p>✔️ Clean-up Facial</p>
+            <p>✔️ Classic Facial</p>
+            <p>✔️ Pearl Facial</p>
+            <p>✔️ Golden Facial</p>
+            <p>✔️ Diamond Facial</p></div>
+     <div class="card">
+            <img src="new6.jpeg" alt="makeup">
+      <h3><u>Makeover</u></h3>
+         <p>✔️ Muhurtham Makeup</p>
+         <p>✔️ Reception Makeup</p>
+         <p>✔️ Baby Shower Makeup</p>
+         <p>✔️ Puberty Makeup</p>
+         <p>✔️ HairStyle with flowers </p>
+         <p>✔️ Saree Drapping</p></div>
+    <div class="card">
+            <img src="new13.jpeg" alt="Henna">
+            <h3><u>Mehandi</u></h3>
+         <p>✔️ Traitional Designs</p>
+         <p>✔️ Arabic Designs</p>
+         <p>✔️ Floral Designs</p>
+         <p>✔️ Bridal Designs</p>
+         <p>✔️ Bangle Designs</p>
+         <p>✔️ Customised Design</p>
+         <p>✔️ Glitter Mehandi</p></div>
+    </div>
+    </body>
+    <style>
+        .Service{
+            color:black;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap:30px;
+            padding:20px;
+        }
+        .card{
+                width:200px;
+                height:450px;
+                background-color:rgba(233, 150, 122, 0.422);
+                border-style: solid;
+                border-radius: 50px;
+                box-shadow:rgba(0, 0, 0, 0.56) 4px 5px;
+                overflow:hidden;
+                text-align: center;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                
+            }
+            .card img{
+                width: 100px;
+                height: 100px;
+                height: 100;
+               margin-top: 10px; 
+               margin-left: 20%;
+            }
+            .card p{
+                text-align: left;
+                margin-left: 5px;
+            }
+    </style>
+    </html>    
+
+    <div class="Information">
+      <h3>Information</h3>
+      Tirunelveli<br>
+      Email: StayStarbeautycare@gmail.com<br>
+      Phone: 8933237868
+    </div>
+
+    <footer>
+      <p>Copyright © 2024 Shiny Star Beauty parlour - All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Star Beauty Parlour</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+  <style>
+    body {
+      color: black;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .container1 {
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end; /* Move login button to right */
+      padding: 10px 30px;
+    }
+
+    .login-btn {
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #ff3385;
+    }
+
+    .title{
+        h2, h3, h4 {
+      text-align: center;
+    }
+}
+.navbar {
+  background-color:transparent;
+  color: white;
+  padding: 10px;
+  position: relative;
+  
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  background-color: #444;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 150px;
+  border-radius: 8px;
+}
+
+.menu.show {
+  display: block;
+}
+
+.menu li {
+  border-bottom: 1px solid #555;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+.menu a {
+  color: rgba(255, 255, 255, 0.611);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+#content {
+  padding: 20px;
+}
+.Information{
+    margin-top:20px;
+}
+    
+    footer {
+      text-align: center;
+      font-size: 16px;
+      background-color:rgba(147, 112, 216, 0.619);
+      color: black;
+      padding: 10px 0;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <header>
+      <button class="login-btn">Login</button>
+    </header>
+    <nav class="navbar">
+    <div class="menu-icon" id="menuIcon">&#9776;</div>
+    <ul class="menu" id="menuList">
+      <li><a href="#" id="homeLink">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+ 
+
+  <script>
+    // Toggle menu visibility
+    const menuIcon = document.getElementById('menuIcon');
+    const menuList = document.getElementById('menuList');
+    const homeLink = document.getElementById('homeLink');
+    const content = document.getElementById('content');
+
+    menuIcon.onclick = () => {
+      menuList.classList.toggle('show');
+    };
+
+    // When Home is clicked
+    homeLink.onclick = () => {
+      content.innerHTML = `
+        <h2>Home</h2>
+        <p>This is the Home section. You can add more details here.</p>
+      `;
+      menuList.classList.remove('show'); // hide menu
+    };
+  </script>
+<div class="title">
+    <h2>Shiny Star Beauty Parlour</h2>
+    <h3>Beauty and Wellness - for everyone.</h3>
+    <h4>Brighten your glow with home Salon's best and exclusive deals.</h4>
+</div>
+    <div class="one">
+      <img src="image1.jpeg" alt="slide1">
+      <img src="image2.jpeg" alt="slide2">
+      <img src="image3.jpeg" alt="slide3">
+    </div>
+
+    <div class="Explore">
+      <div class="AboutUs">
+        <p>Welcome to Shiny Star Beauty Parlour, where beauty meets perfection. Our expert stylists and 
+          beauticians are dedicated to enhancing your natural glow with personalized care. From trendy haircuts 
+          and flawless makeup to relaxing spa treatments, we offer everything to make you feel confident and
+          radiant. Step into our peaceful space and enjoy a luxurious beauty experience. Let us help you look 
+          and feel your best — because you deserve it!
+        </p>
+      </div>
+   
+      <div class="container">
+        <div class="row mt-5 p-4">
+            <div class="col bg-success p-3 rounded shadow m-2 p-4">
+                <img src="new1.jpeg" width="100%" height="100%">
+            </div>
+        <div class="col bg-warning p-3 rounded shadow m-2 p-4">
+            <img src="new2.jpeg" width="100%" height="100%">
+        </div>
+        <div class="col bg-secondary p-3 rounded shadow m-2 p-4">
+            <img src="new3.jpeg" width="100%" height="100%">
+        </div>
+            </div>
+            </div>
+    <div class="container-fluid">
+        <div class="row mt-5 p-4">
+            <div class="col bg-warning p-4 m-2 rounded shadow">
+                <img src="new4.jpeg" width="100%" height="100%">
+            </div>
+        <div class="col bg-success  p-4  m-2 rounded shadow">
+            <img src="new5.jpeg" width="100%" height="100%"> 
+        </div>
+            </div>
+            </div>
+            <div class="containe-fluid">
+    <div class="row m-6 p-4">
+        <div class="col bg-primary text-center p-4 m-2 rounded shadow">
+             <img src="new6.jpeg" width="100%" height="100%">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row p-8  m-7">
+        <div class="col bg-danger text-center p-3 m-1 rounded shadow">
+            <img src="new7.jpeg" width="100%" height="100%">
+        </div>
+        <div class="col bg-warning text-center p-4 m-2 rounded shadow">
+            <img src="new8.jpeg" width="100%" height="100%">
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row  p-5  m-12">
+        <div class="col bg-secondary text-center p-4 m-1 rounded shadow">
+            <img src="new9.jpeg" width="100%" height="100%">
+        </div>
+        <div class="col bg-primary  text-center p-4 m-1 rounded shadow">
+            <img src="new12.jpeg" width="100%" height="100%">
+        </div>
+        <div class="col bg-danger text-center p-4 m-2 rounded shadow">
+            <img src="new11.jpeg" width="100%" height="100%">
+        </div>
+    </div>
+    </div>
+</div>
+    <div class="offers">
+      <h4>🎉 Special Offers 🎉</h4>
+      ✨ Bridal Package Offer: Get up to 25% off on full bridal makeup packages.<br>
+      💇‍♀️ Hair Care Combo: Haircut + Hair Spa + Blow Dry — just ₹999!<br>
+      💅 Beauty Glow Deal: Facial + Pedicure + Manicure — Save 20% this month.<br>
+      💖 New Customer Offer: Flat 15% off on your first visit!<br>
+      🌸 Festival Special: Book any 2 services and get the 3rd free!<br>
+    </div>
+     </div>
+    <div class="Link">
+        <h5>Link</h5>
+      <a href="#contact">Contact Us</a><br>
+      <a href="#condiions">Terms and Conditions</a><br>
+      <a href="#policy">Privacy Policy</a><br>
+    </div>
+
+    <div class="Information">
+      <h3>Information</h3>
+      Tirunelveli<br>
+      Email: StayStarbeautycare@gmail.com<br>
+      Phone: 8933237868
+    </div>
+
+    <footer>
+      <p>Copyright © 2024 Success Beautician Academy - All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
